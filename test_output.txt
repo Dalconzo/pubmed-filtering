@@ -1,0 +1,53 @@
+PubMed Search Results
+Date: 2025-02-23 19:20:58
+Query: cancer treatment 2023
+Articles found: 2
+
+================================================================================
+
+================================================================================
+TITLE: Cytoreductive surgery combined with hyperthermic intraperitoneal chemotherapy and intraoperative radiation therapy in the management of gastric cancer: a 10-year single center experience.
+AUTHORS: Alaswad Marwan M, Arabi Tarek Z, Alshahrani Asma S, Sabbah Belal N, Jaamour Heba W, AlOtry Abdullah A, Saleh Tariq W, Alhosainy Ziad H, Elkordy Fadwa H, Elnegali Aya I, Tlayjeh Mohamed H, Kseibi Firas E, Azzam Ayman Z, Amin Tarek M
+JOURNAL: World journal of surgical oncology
+PMID: 39987135
+--------------------------------------------------------------------------------
+
+STUDY POPULATION:
+Not found
+----------------------------------------
+
+METHODOLOGY:
+Not found
+----------------------------------------
+
+RESULTS:
+Not found
+----------------------------------------
+
+CONCLUSIONS:
+Not found
+----------------------------------------
+
+================================================================================
+TITLE: MRI findings for the pretreatment diagnosis of small Meckel's cave tumors: comparison of meningiomas and schwannomas.
+AUTHORS: Tu Yuan-Yu, Wu Hsin-Wei, Hsueh Fu-Sheng, Tai Wei-An, Yu Kai-Wei, Wu Chia-Hung, Lin Te-Ming, Yang Chung-Han, Chen Shu-Ting, Chang Feng-Chi
+JOURNAL: BMC medical imaging
+PMID: 39987052
+--------------------------------------------------------------------------------
+
+STUDY POPULATION:
+Not found
+----------------------------------------
+
+METHODOLOGY:
+Not found
+----------------------------------------
+
+RESULTS:
+Not found
+----------------------------------------
+
+CONCLUSIONS:
+Not found
+----------------------------------------
+

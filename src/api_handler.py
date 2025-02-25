@@ -40,6 +40,20 @@ class PubMedAPI:
 
     def get_article_metadata(self, article: Dict) -> Dict:
         """Extract key metadata from article"""
+        print("\nRAW PUBMED RESPONSE:")
+        print("=" * 80)
+        print(article)
+        print("=" * 80)
+        
+        print("\nARTICLE STRUCTURE:")
+        for key in article:
+            print(f"\nKey: {key}")
+            if isinstance(article[key], list):
+                for item in article[key]:
+                    print("\nSubkeys:")
+                    for subkey in item:
+                        print(f"- {subkey}")
+        
         metadata = {
             'title': '',
             'authors': [],
@@ -50,18 +64,29 @@ class PubMedAPI:
         }
         
         try:
-            article_data = article['PubmedArticle'][0]
-            metadata['title'] = article_data['MedlineCitation']['Article']['ArticleTitle']
-            metadata['authors'] = [f"{author['LastName']} {author['ForeName']}" 
-                                 for author in article_data['MedlineCitation']['Article']['AuthorList']]
-            metadata['abstract'] = article_data['MedlineCitation']['Article'].get('Abstract', {}).get('AbstractText', [''])[0]
-            metadata['journal'] = article_data['MedlineCitation']['Article']['Journal']['Title']
-            metadata['pmid'] = article_data['MedlineCitation']['PMID']
+            article_data = article['PubmedArticle'][0]['MedlineCitation']['Article']
+            print("\nARTICLE DATA STRUCTURE:")
+            for key in article_data:
+                print(f"- {key}")
+                
+            metadata['title'] = article_data['ArticleTitle']
+            metadata['authors'] = [
+                f"{author['LastName']} {author['ForeName']}" 
+                for author in article_data.get('AuthorList', [])
+            ]
+            
+            if 'Abstract' in article_data:
+                abstract_texts = article_data['Abstract']['AbstractText']
+                metadata['abstract'] = ' '.join(abstract_texts)
+                    
+            metadata['journal'] = article_data['Journal']['Title']
+            metadata['pmid'] = article['PubmedArticle'][0]['MedlineCitation']['PMID']
+            
         except (KeyError, IndexError) as e:
             print(f"Error parsing article metadata: {e}")
             
         return metadata
-
+    
 def create_api_instance(email: str, api_key: str = None) -> PubMedAPI:
     """Factory function to create PubMedAPI instance"""
     return PubMedAPI(email, api_key)
